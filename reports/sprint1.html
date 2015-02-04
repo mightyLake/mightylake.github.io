@@ -1,0 +1,90 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/normalize.css"><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="/c3/c3.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"><title>MightyLake</title></head><body><header class="jumbotron"><h1>mightyLake</h1><h2>project status ~ hosted on <a href="https://github.com/mightyLake/mightylake.github.io">github</a></h2></header><div class="container readable-width"><div class="report"><h2>mightyLake</h2>
+<p>David Hatch – <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#100;&#97;&#118;&#105;&#100;&#46;&#x68;&#x61;&#116;&#x63;&#x68;&#64;&#x79;&#97;&#108;&#x65;&#46;&#101;&#x64;&#117;">&#100;&#97;&#118;&#105;&#100;&#46;&#x68;&#x61;&#116;&#x63;&#x68;&#64;&#x79;&#97;&#108;&#x65;&#46;&#101;&#x64;&#117;</a></p>
+<p>Anthony Annetta – <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x61;&#x6e;&#x74;&#x68;&#x6f;&#x6e;&#x79;&#46;&#97;&#x6e;&#110;&#101;&#116;&#x74;&#x61;&#x40;&#121;&#97;&#x6c;&#101;&#x2e;&#x65;&#100;&#117;">&#x61;&#x6e;&#x74;&#x68;&#x6f;&#x6e;&#x79;&#46;&#97;&#x6e;&#110;&#101;&#116;&#x74;&#x61;&#x40;&#121;&#97;&#x6c;&#101;&#x2e;&#x65;&#100;&#117;</a></p>
+<p>Jessie Shoemaker – <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#106;&#x65;&#x73;&#115;&#x69;&#x65;&#x2e;&#x73;&#104;&#x6f;&#101;&#x6d;&#97;&#x6b;&#101;&#x72;&#64;&#x79;&#97;&#x6c;&#x65;&#x2e;&#x65;&#x64;&#x75;">&#106;&#x65;&#x73;&#115;&#x69;&#x65;&#x2e;&#x73;&#104;&#x6f;&#101;&#x6d;&#97;&#x6b;&#101;&#x72;&#64;&#x79;&#97;&#x6c;&#x65;&#x2e;&#x65;&#x64;&#x75;</a></p>
+<h3>Project Status Report (Sprint 1: Jan 28, 2015 - Feb 3, 2015)</h3>
+<h4>Burn Down Chart</h4>
+<div id="chart"></div><h4>Sprint Completed Stories</h4>
+<ul>
+<li>Create work environment.</li>
+<li>Storyboard the project &amp; assign initial stories.</li>
+<li>Build &#39;about&#39; page framework</li>
+<li>HTML status report</li>
+<li>Host week 1 status report</li>
+</ul>
+<p>The team got a late start on the work for this sprint as a result of an
+unexpected challenge: we had each selected and begun working with other
+teams, but none of us had thought to email our team selections to the
+professors. As a result, we were randomly assigned to this new team. After
+resolving some resulting chaos, Team mightyLake began working on Monday,
+February 2. Given our resultant short timeframe for work in Sprint 1, we
+made our goal for Sprint 1 to create the environment and set up all the
+tools we will need to complete the project.</p>
+<p>Another challenge encountered is the full gamut of coding experience on the
+team. David is a computer science major and at ease with the project
+material, Anthony has some prior coding experience and is comfortable with
+the coding work but new to the environment/tools, and Jessie has no
+experience coding or with the tools being used to manage the process. The
+team worked to make equitable work assignments in the amount of time
+commitment required form each person while enabling full learning by all
+parties. David is particularly generous with his time and willingness to
+coach on technical aspects of the project. The team will continue to assess
+success with equitable work delegation as the project advances.</p>
+<h4>Product Backlog</h4>
+<ul>
+<li>Find team logo</li>
+<li>Create homepage</li>
+<li>Create event page</li>
+<li>Create API</li>
+<li>Enable RSVP</li>
+<li>Make it all look <em>awesome</em></li>
+</ul>
+<p>Full backlog available at waffle io:
+<a href="http://waffle.io/mightylake/mgt656-spring-2015-project"><img src="https://badge.waffle.io/mightylake/mgt656-spring-2015-project.svg?label=ready&amp;title=Ready" alt="Stories in Ready"></a>.</p>
+<h4>What&#39;s next</h4>
+<p>In Sprint 2 (the time before the next weekly report) we will construct the
+functional framework for the entire application. We will structure all
+pages, build the API, and enable all necessary features. We will not take on
+the final story in our backlog (“Make it all look awesome”) until Sprint 3.</p>
+</div></div><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script><script src="/c3/c3.js"></script><script>var padding = 40,
+    paddingtb = 20,
+    chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            x: 'x',
+            columns: [
+                ['x', '2015-01-28', '2015-01-29', '2015-01-30', '2015-01-31',
+                      '2015-02-01', '2015-02-02', '2015-02-03'],
+                ['tasks', 7, 7, 7, 7, 3, 2, 0]
+            ]
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                label: {
+                    text: 'Date',
+                    position: 'outer-left'
+                },
+                tick: {
+                    format: '%m/%d'
+                }
+            },
+            y: {
+                label: {
+                    text: 'Sprint Tasks Remaining',
+                    position: 'outer-bottom'
+                }
+            }
+        },
+        padding: {
+            top: paddingtb,
+            right: padding,
+            bottom: paddingtb,
+            left: padding
+        },
+        legend: {
+            hide: true
+        }
+});
+
+</script></body></html>

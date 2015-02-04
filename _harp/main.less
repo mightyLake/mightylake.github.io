@@ -1,19 +1,63 @@
-body{
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+// Smooth fonts
+html, html a {
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body {
   font-family: "Helvetica";
-  text-align: center;
-  padding: 50px 20px 0;
   background: #f4f4f7;
   color: #444;
   margin: 0;
+  padding: 0;
+  font-size: 14px !important;
 }
 
-h1{
-  font-size: 65px;
+header {
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+  background: @gray-dark !important;
+  color: white !important;
+  text-align: center;
   line-height: 1.2em;
-  border-bottom: #CCC solid 1px;
-  padding: 20px 0;
+  h2 {
+    font-size: 1em;
+    font-style: italic;
+    a, a:hover, a:visited {
+      color: @gray-lighter;
+      text-decoration: underline;
+    }
+  }
 }
 
-h3{
-  font-weight: 300;
+.report {
+  h4 {
+    font-style: italic;
+  }
+  h4,h5 {
+    color: lighten(@gray-light, 10%);
+    text-decoration: underline;
+  }
+}
+
+// constrain width nicely
+.readable-width {
+  max-width: 38em !important;
+}
+
+.container {
+  border-left: thin single @gray;
+}
+
+
+// increase chart font size
+.c3-axis-y-label, .c3-axis-x-label {
+  font-size: 12px !important;
 }

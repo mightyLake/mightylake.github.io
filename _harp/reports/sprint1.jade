@@ -1,2 +1,111 @@
-:markdown
-    ## Sprint 1
+extends ../_jadelayout
+
+block content
+    .report
+        :markdown
+            ## mightyLake
+
+            David Hatch – <david.hatch@yale.edu>
+
+            Anthony Annetta – <anthony.annetta@yale.edu>
+
+            Jessie Shoemaker – <jessie.shoemaker@yale.edu>
+
+            ### Project Status Report (Sprint 1: Jan 28, 2015 - Feb 3, 2015)
+
+            #### Burn Down Chart
+
+        #chart
+
+        :markdown
+            #### Sprint Completed Stories
+
+            - Create work environment.
+            - Storyboard the project & assign initial stories.
+            - Build 'about' page framework
+            - HTML status report
+            - Host week 1 status report
+
+            The team got a late start on the work for this sprint as a result of an
+            unexpected challenge: we had each selected and begun working with other
+            teams, but none of us had thought to email our team selections to the
+            professors. As a result, we were randomly assigned to this new team. After
+            resolving some resulting chaos, Team mightyLake began working on Monday,
+            February 2. Given our resultant short timeframe for work in Sprint 1, we
+            made our goal for Sprint 1 to create the environment and set up all the
+            tools we will need to complete the project.
+
+            Another challenge encountered is the full gamut of coding experience on the
+            team. David is a computer science major and at ease with the project
+            material, Anthony has some prior coding experience and is comfortable with
+            the coding work but new to the environment/tools, and Jessie has no
+            experience coding or with the tools being used to manage the process. The
+            team worked to make equitable work assignments in the amount of time
+            commitment required form each person while enabling full learning by all
+            parties. David is particularly generous with his time and willingness to
+            coach on technical aspects of the project. The team will continue to assess
+            success with equitable work delegation as the project advances.
+
+            #### Product Backlog
+
+            - Find team logo
+            - Create homepage
+            - Create event page
+            - Create API
+            - Enable RSVP
+            - Make it all look awesome.
+
+            Full backlog available at waffle io:
+            [![Stories in Ready](https://badge.waffle.io/mightylake/mgt656-spring-2015-project.svg?label=ready&title=Ready)](http://waffle.io/mightylake/mgt656-spring-2015-project).
+
+            #### What's next
+
+            In Sprint 2 (the time before the next weekly report) we will construct the
+            functional framework for the entire application. We will structure all
+            pages, build the API, and enable all necessary features. We will not take on
+            the final story in our backlog (“Make it all look awesome”) until Sprint 3.
+
+append scripts
+    script.
+        var padding = 40,
+            paddingtb = 20,
+            chart = c3.generate({
+                bindto: '#chart',
+                data: {
+                    x: 'x',
+                    columns: [
+                        ['x', '2015-01-28', '2015-01-29', '2015-01-30', '2015-01-31',
+                              '2015-02-01', '2015-02-02', '2015-02-03'],
+                        ['tasks', 7, 7, 7, 7, 3, 2, 0]
+                    ]
+                },
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        label: {
+                            text: 'Date',
+                            position: 'outer-left'
+                        },
+                        tick: {
+                            format: '%m/%d'
+                        }
+                    },
+                    y: {
+                        label: {
+                            text: 'Sprint Tasks Remaining',
+                            position: 'outer-bottom'
+                        }
+                    }
+                },
+                padding: {
+                    top: paddingtb,
+                    right: padding,
+                    bottom: paddingtb,
+                    left: padding
+                },
+                legend: {
+                    hide: true
+                }
+        });
+
+

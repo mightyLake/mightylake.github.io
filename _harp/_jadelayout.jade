@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    block head
+        link(rel="stylesheet" href="/normalize.css")
+        link(rel="stylesheet" href="/main.css")
+        link(rel="stylesheet" href="/c3/c3.css")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+        title MightyLake
+  body
+    header.jumbotron
+        h1 mightyLake
+        h2 project status ~ hosted on <a href="https://github.com/mightyLake/mightylake.github.io">github</a>
+    .container.readable-width
+        block content
+
+    block scripts
+        script(src="http://d3js.org/d3.v3.min.js" charset="utf-8")
+        script(src="/c3/c3.js")

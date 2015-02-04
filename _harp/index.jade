@@ -1,2 +1,7 @@
-h1 Welcome to Harp.
-h3 This is yours to own. Enjoy.
+h2 Status Reports
+
+ul
+each report, slug in public.reports._data
+    li
+        a(href="/reports/#{ slug }")= report.title
+

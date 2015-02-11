@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/normalize.css"><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="/c3/c3.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"><title>MightyLake</title></head><body><header class="jumbotron"><h1><a href="/">mightyLake</a></h1><h2>project status ~ hosted on <a href="https://github.com/mightyLake/mightylake.github.io">github</a></h2></header><div class="container readable-width"><div class="report"><h2>mightyLake</h2>
+<p>David Hatch – <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x64;&#97;&#118;&#105;&#x64;&#46;&#104;&#97;&#x74;&#x63;&#x68;&#64;&#121;&#97;&#108;&#101;&#46;&#101;&#100;&#x75;">&#x64;&#97;&#118;&#105;&#x64;&#46;&#104;&#97;&#x74;&#x63;&#x68;&#64;&#121;&#97;&#108;&#101;&#46;&#101;&#100;&#x75;</a></p>
+<p>Anthony Annetta – <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#97;&#110;&#116;&#x68;&#x6f;&#110;&#x79;&#x2e;&#97;&#x6e;&#110;&#101;&#116;&#116;&#x61;&#64;&#121;&#x61;&#108;&#x65;&#46;&#x65;&#100;&#x75;">&#97;&#110;&#116;&#x68;&#x6f;&#110;&#x79;&#x2e;&#97;&#x6e;&#110;&#101;&#116;&#116;&#x61;&#64;&#121;&#x61;&#108;&#x65;&#46;&#x65;&#100;&#x75;</a></p>
+<p>Jessie Shoemaker – <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6a;&#101;&#x73;&#x73;&#105;&#101;&#46;&#115;&#x68;&#x6f;&#x65;&#109;&#x61;&#107;&#x65;&#114;&#x40;&#x79;&#x61;&#x6c;&#101;&#46;&#101;&#x64;&#117;">&#x6a;&#101;&#x73;&#x73;&#105;&#101;&#46;&#115;&#x68;&#x6f;&#x65;&#109;&#x61;&#107;&#x65;&#114;&#x40;&#x79;&#x61;&#x6c;&#101;&#46;&#101;&#x64;&#117;</a></p>
+<h3>Project Status Report (Sprint 1: Feb 4, 2015 - Feb 10, 2015)</h3>
+<h4>Burn Down Chart</h4>
+<div id="chart"></div><h4>Sprint Completed Stories</h4>
+<ul>
+<li>As a user, I can visit your site and it looks consistent</li>
+<li>As a visitor, I see a footer on the bottom of every page</li>
+<li>As a programmer, I have the correct URL to vendored bootstrap</li>
+<li>As any user, I can visit the url at / and see your homepage,
+which has an unordered list of events, including their details</li>
+<li>As a developer, there is an API so that I can program</li>
+<li>As a user, I can search for events by title in the API output, so
+that I can gather information about certain events</li>
+<li>As a user, I can visit the url /about and see information about
+your company</li>
+<li>As a user, I can visit your API at /api/events and retrieve an
+object with key events containing all events in JSON format</li>
+</ul>
+<h4>Product Backlog</h4>
+<ul>
+<li>Find/make team logo</li>
+<li>Validate RSVP email addresses from Yale domain &amp; reject all others</li>
+<li>Enable new event creation</li>
+<li>Notify user of errors in event creation</li>
+<li>Make it all look awesome</li>
+</ul>
+<p>Full backlog available at waffle io:
+<a href="http://waffle.io/mightylake/mgt656-spring-2015-project"><img src="https://badge.waffle.io/mightylake/mgt656-spring-2015-project.svg?label=ready&amp;title=Ready" alt="Stories in Ready"></a>.</p>
+<h4>What&#39;s next</h4>
+<p>In Sprint 3 (the time before the next weekly report) we will finish
+functional construction aspects that are overflow from Sprint 2.
+Much of that work is in progress, but not yet passing the tests and
+therefore requires additional development. Then we will make it all
+look awesome. Time permitting, we will also tackle items in our
+“enhancement” category.</p>
+</div></div><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script><script src="/c3/c3.js"></script><script>var padding = 40,
+    paddingtb = 20,
+    chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            x: 'x',
+            columns: [
+                ['x', '2015-02-04', '2015-02-05', '2015-02-06',
+                      '2015-02-07', '2015-02-08', '2015-02-09',
+                      '2015-02-10'],
+                ['tasks', 125, 120, 98, 85, 85, 62, 57]
+            ]
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                label: {
+                    text: 'Date',
+                    position: 'outer-left'
+                },
+                tick: {
+                    format: '%m/%d'
+                },
+            },
+            y: {
+                label: {
+                    text: 'Sprint Story Points Remaining',
+                    position: 'outer-bottom'
+                },
+                min: 0
+            }
+        },
+        padding: {
+            top: paddingtb,
+            right: padding,
+            bottom: paddingtb,
+            left: padding
+        },
+        legend: {
+            hide: true
+        }
+});
+
+</script></body></html>

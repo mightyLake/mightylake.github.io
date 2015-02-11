@@ -1,0 +1,102 @@
+extends ../_jadelayout
+
+block content
+    .report
+        :markdown
+            ## mightyLake
+
+            David Hatch – <david.hatch@yale.edu>
+
+            Anthony Annetta – <anthony.annetta@yale.edu>
+
+            Jessie Shoemaker – <jessie.shoemaker@yale.edu>
+
+            ### Project Status Report (Sprint 1: Feb 4, 2015 - Feb 10, 2015)
+
+            #### Burn Down Chart
+
+        #chart
+
+        :markdown
+            #### Sprint Completed Stories
+
+            - As a user, I can visit your site and it looks consistent
+            - As a visitor, I see a footer on the bottom of every page
+            - As a programmer, I have the correct URL to vendored bootstrap
+            - As any user, I can visit the url at / and see your homepage,
+              which has an unordered list of events, including their details
+            - As a developer, there is an API so that I can program
+            - As a user, I can search for events by title in the API output, so
+              that I can gather information about certain events
+            - As a user, I can visit the url /about and see information about
+              your company
+            - As a user, I can visit your API at /api/events and retrieve an
+              object with key events containing all events in JSON format
+
+
+            #### Product Backlog
+
+            - Find/make team logo
+            - Validate RSVP email addresses from Yale domain & reject all others
+            - Enable new event creation
+            - Notify user of errors in event creation
+            - Make it all look awesome
+
+            Full backlog available at waffle io:
+            [![Stories in Ready](https://badge.waffle.io/mightylake/mgt656-spring-2015-project.svg?label=ready&title=Ready)](http://waffle.io/mightylake/mgt656-spring-2015-project).
+
+            #### What's next
+
+            In Sprint 3 (the time before the next weekly report) we will finish
+            functional construction aspects that are overflow from Sprint 2.
+            Much of that work is in progress, but not yet passing the tests and
+            therefore requires additional development. Then we will make it all
+            look awesome. Time permitting, we will also tackle items in our
+            “enhancement” category.
+
+append scripts
+    script.
+        var padding = 40,
+            paddingtb = 20,
+            chart = c3.generate({
+                bindto: '#chart',
+                data: {
+                    x: 'x',
+                    columns: [
+                        ['x', '2015-02-04', '2015-02-05', '2015-02-06',
+                              '2015-02-07', '2015-02-08', '2015-02-09',
+                              '2015-02-10'],
+                        ['tasks', 125, 120, 98, 85, 85, 62, 57]
+                    ]
+                },
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        label: {
+                            text: 'Date',
+                            position: 'outer-left'
+                        },
+                        tick: {
+                            format: '%m/%d'
+                        },
+                    },
+                    y: {
+                        label: {
+                            text: 'Sprint Story Points Remaining',
+                            position: 'outer-bottom'
+                        },
+                        min: 0
+                    }
+                },
+                padding: {
+                    top: paddingtb,
+                    right: padding,
+                    bottom: paddingtb,
+                    left: padding
+                },
+                legend: {
+                    hide: true
+                }
+        });
+
+

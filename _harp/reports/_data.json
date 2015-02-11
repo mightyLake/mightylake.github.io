@@ -1,5 +1,9 @@
 {
     "sprint1": {
         "title" : "Sprint 1"
+    },
+
+    "sprint2": {
+        "title": "Sprint 2"
     }
 }

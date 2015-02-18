@@ -1,0 +1,248 @@
+extends ../_jadelayout
+
+block content
+    .report
+        :markdown
+            ## mightyLake
+
+            David Hatch – <david.hatch@yale.edu>
+
+            Anthony Annetta – <anthony.annetta@yale.edu>
+
+            Jessie Shoemaker – <jessie.shoemaker@yale.edu>
+
+            ### Project Status Report (Sprint 3: Feb 11, 2015 - Feb 18, 2015)
+
+            #### Burn Down Chart
+
+        #chart
+
+        :markdown
+            #### Sprint Completed Stories
+
+            - As a user, I am presented with the option to donate to events
+            - As a user, I see reasonable “new event” options
+            - As a host, I know that I can only enter valid titles, locations,
+              and days
+            - As an owner, I can see Google analytics of my page
+            - As a host, I do not see “Day 0” as an option
+            - As an attendee, I can RSVP to events
+            - As a user, I can visit your new events page and be presented with
+              reasonable
+            - options
+            - As site owners, we have a placeholder image for our logo while we
+              await logo
+            - development
+            - As site owners, we have a logo so that we are visually
+              recognizable
+            - As a user, I see a link to your home page in the footer
+            - As a user, I don’t see footer overrides on some pages
+            - As a user, I don’t see header overrides on some pages
+            - As an attendee, I’m presented with the option to donate to events
+            - As a product owner, I can present the user with different versions
+              of the site
+            - As a user, I can visit your site and it looks awesome
+            - As a product owner, I can gather and evaluate useage statistics
+              about the site
+            - As a product owner, I can see the results of A:B testing so I can
+              evaluate
+            - mechanisms that maximize donations
+            - As a product owner, I can evaluate the traffic to my site so I can
+              target those most likely to donate
+
+            Our team goal for Sprint 2 was to completely build all the
+            functionality of the entire site so that we could devote Sprint 3 to
+            design elements. We overestimated our velocity and encountered
+            obstacles that slowed our progress, resulting in a backlog of Sprint
+            2 functionality build-out yet to be done as of the start of Sprint
+            3. This led to a high number of story points for Sprint 3, and
+            required significant effort.
+
+            Additionally, in Sprint 3 a new set of user stories were added to
+            our backlog.  First, event hosts wanted ways to solicit donations to
+            help fund their parties via the online system. Second, product
+            owners wanted to see which page presentation maximized those
+            donations, and from whom donations of a significant size were likely
+            to come. These stories required development of A:B testing and
+            analytics infrastructure that we had not anticipated in our original
+            Sprint 3 planning.
+
+            Resultingly, Sprint 3 became dominated by functionality build-out,
+            despite prior plans to reserve the time for cosmetic elements of
+            site presentation. MightyLake was able to produce a fully-functional
+            product that passes all required tests, enables donations, observes
+            the results of A:B testing, returns some analytics to the site
+            owners, and has some CSS style elements.
+
+            #### Product Backlog
+
+            - None — The software delivery is made as of the time of this report
+
+            Sprint 3 concludes our work on this project, and there is no
+            official remaining backlog. Were we to continually iterate our site,
+            wish list items that would likely find their way into our backlog
+            include improved appearance via more robust CSS styling, more robust
+            analytic testing of user behavior, and subsequent content redesigns
+            based on donation behavior indications revealed by the analytics.
+
+            #### Project Retrospective
+
+            Completing the Eventbrite clone project imparted and/or reinforced
+            several things covered in the course in a way that anything other
+            than completing a project may not have:
+
+            1. **Coordination a la scrum is important.** Our team used Waffle to
+            track user stories and their delegation, which was a good tool that
+            met our basic needs well. We did not—at least initially—do much
+            additional communication such as daily stand-up meetings or sprint
+            debriefing sessions. Our experience eschewing these scrum elements
+            highlighted the value they impart when Sprint 2 challenges delayed
+            work—challenges that could probably have been overcome more quickly
+            by voicing them and briefly crowdsourcing potential solutions.
+            Similarly, skipped sprint debriefing sessions led to over-ambition
+            with regard to story points to continue (although in our
+            deadline-constrained context with only three sprints, that may not
+            have been able to be different because by the time we realized our
+            velocity misjudgement, we were entering the final sprint and had to
+            complete all remaining stories regardless).
+
+            2. **Sharing a common physical space would be helpful.** Our team
+            worked remotely, which enabled communication gaps to endure. A
+            shared workspace may have been preferable form a productivity
+            standpoint.
+
+            3. **Version control and code reviews are essential.** Our team
+            spanned programming skillsets from experienced programmer to
+            complete novice. The novice on the team had a steep learning curve,
+            and pushed borked code on several occasions. The ability—built into
+            the tools—to perform code reviews, accept or reject a pull request,
+            and/or revert to an earlier version when the novice merged borked
+            code proved very important.
+
+
+            In addition to those points, our experience on the project presented
+            a challenge around differing levels of coding proficiency. There was
+            a stark difference in our skillsets, which was handled gracefully,
+            but was nevertheless a challenge, and would not have been
+            encountered (at least not to such an extreme degree) in a real-world
+            programming context.
+
+            Finally, our experience revealed the benefit of programming CSS
+            stylistic elements alongside functional HTML code. We designed our
+            workflow to produce 100% working code (the graded portion of the
+            project) before devoting energy to stylistic (nongraded) elements.
+            Going back in to style HTML components after the fact was more
+            challenging than it may have been to style them concurrently,
+            avoiding the need to retrace steps.
+
+            #### Traffic Analysis
+
+            The data our team gathered through traffic analysis was largely
+            inconclusive.  Despite beginning to setup multiple analytics
+            platforms starting on Thursday 2/12, we did not gather any valid
+            data until Tuesday 2/17.  This was partly due to issues on our end,
+            but was mainly influenced by issues outside of our control.  Users
+            stopped visiting the website over the weekend, and didn't return to
+            their regular flow.
+
+            Users to our site seemed completely unwilling to donate.  (This was
+            not the expected result, we did have a valid donation link, and had
+            confirmed that the behavior tracking properly followed *real* users
+            all the way through the process from index page to donation).
+
+            There was some data gathered from the index page AB test.  Version A
+            presented links to event detail pages containing the prefix "RSVP
+            to", while version B presented links with only the title of the
+            event.
+
+            The data gathered is summarized below, by referrer and version:
+
+            | Referrer                  | Showing RSVP |  Visits |
+            |---------------------------|--------------|---------|
+            | http://www.yale.edu/      | TRUE         | 50      |
+            | http://www.yale.edu/      | FALSE        | 43      |
+            | http://som.yale.edu/      | TRUE         | 34      |
+            | http://som.yale.edu/      | FALSE        | 28      |
+            | http://medicine.yale.edu/ | TRUE         | 5       |
+            | http://medicine.yale.edu/ | FALSE        | 4       |
+            | http://www.law.yale.edu/  | TRUE         | 1       |
+
+            We see some slight increase in visits for the pages showing RSVP,
+            but upon brief statistical analysis, we conclude that this
+            difference, given the limited quantity of data, isn't significant.
+
+            If we had data from a longer time period, and more data points, we
+            may have been able to draw a stronger conclusion from this
+            difference.
+
+            | Referrer                 |  Sample Probability |  P-Value |  95% Confidence Interval |
+            |--------------------------|--------------|----------|--------------------------| 
+            | http://www.yale.edu      |  0.54        |  0.267   |  0.447 - 1.0             | 
+            | http://som.yale.edu      |  0.55        |  0.263   |  0.436 - 1.0             | 
+            | http://medicine.yale.edu |  0.56        |  0.5     |  0.25 - 1.0              |
+
+            This shows the results of a binomial test with the alternative
+            hypothesis that the true probability of clicking a link with RSVP is
+            greater than 0.5, and thus we should show the link.
+
+            The p-value column indicates the chance that this same result
+            occurred randomly.  In all cases, our 95% confidence interval
+            contains the possibility that the true probability is less than 0.5.
+
+            Based on this analysis, the data we collected is inconclusive.  We
+            would need additional testing to determine the optimal index page
+            version.
+
+append scripts
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+        var tables  = document.getElementsByTagName("table");
+        for (var i = 0; i < tables.length; i++) {
+            tables[i].classList.add("table");
+        }});
+
+    script.
+        var padding = 40,
+            paddingtb = 20,
+            chart = c3.generate({
+                bindto: '#chart',
+                data: {
+                    x: 'x',
+                    columns: [
+                        ['x', '2015-02-12', '2015-02-13', '2015-02-14',
+                              '2015-02-15', '2015-02-16', '2015-02-17',
+                              '2015-02-18'],
+                        ['tasks', 248, 237, 221, 203, 194, 160, 0]
+                    ]
+                },
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        label: {
+                            text: 'Date',
+                            position: 'outer-left'
+                        },
+                        tick: {
+                            format: '%m/%d'
+                        },
+                    },
+                    y: {
+                        label: {
+                            text: 'Sprint Story Points Remaining',
+                            position: 'outer-bottom'
+                        },
+                        min: 0
+                    }
+                },
+                padding: {
+                    top: paddingtb,
+                    right: padding,
+                    bottom: paddingtb,
+                    left: padding
+                },
+                legend: {
+                    hide: true
+                }
+        });
+
+
